@@ -4,6 +4,7 @@ $app->get('/(:locale)(/)'/*, $accessControl('some')*/, function ($locale = APP_D
 
     echo "<pre>";var_dump(
         'вывести темлейт',
+        'подключить illuminate database',
     $app->config['templates.path']
     );die;
     $app->render('index.twig', compact('title', 'locale'));
