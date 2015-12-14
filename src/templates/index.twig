@@ -1,0 +1,10 @@
+{% extends "/layouts/base.layout.twig" %}
+{% set title = 'title' %}
+{% set lang = locale is defined ? {'locale': locale} : none %}
+{% block title %}{{ title|trans }}{% endblock %}
+
+{% block content %}
+    <div class="content">
+        content
+    </div>
+{% endblock %}

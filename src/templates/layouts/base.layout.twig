@@ -1,0 +1,45 @@
+{% set page_description = 'description' %}
+{% set page_keywords = [
+        'keywords'
+]|join(', ') %}
+
+<!DOCTYPE html> 
+<html lang="{{ locale }}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="{{ locale }}" />
+    <meta content="index, follow" name="robots">
+
+    {% if page is not empty %}
+        <meta content="{{ page.description is not empty ? 'page.description : page_description }}" name="description">
+        <meta content="{{ page.keywords is not empty ? page.keywords : page_keywords }}" name="keywords">
+    {% else %}
+        <meta content="{{ page_description }}" name="description">
+        <meta content="{{ page_keywords }}" name="keywords">
+    {% endif %}
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    {% block stylesheets %}{% endblock %}
+    <link rel="stylesheet" type="text/css" href="/css/style.css?{{ app.frontend_revision }}" />
+</head>
+<body>
+
+    <div class="container" id="page">
+        {% block content %}{% endblock %}
+    </div><!-- page -->
+
+    <!--   SCRIPTS      -->
+        <script src="/js/base.js?{{ app.frontend_revision }}"></script>
+        {% block javascripts %}{% endblock %}
+    <!--   SCRIPTS      -->
+
+</body>
+</html>

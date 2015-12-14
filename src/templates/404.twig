@@ -1,0 +1,14 @@
+{% extends "/layouts/base.layout.twig" %}
+{% set locale = locale is defined ? {'locale': locale} : none %}
+{% set title = 'Sorry. Page not found.' %}
+
+{% block title %}{{ title|trans }}{% endblock %}
+
+{% block content %}
+<div class="center code-404__block">
+    <h1>{{ title|trans }}</h1>
+    <div>
+        <div class="code__404">404</div>
+    </div>
+</div>
+{% endblock %}

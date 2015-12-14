@@ -1,0 +1,11 @@
+/vendor/
+tags
+*.tags
+
+src/config/db.php
+src/cache
+
+public_html/node_modules/*
+
+public_html/src/js/revision.js
+public_html/sitemap.xml
