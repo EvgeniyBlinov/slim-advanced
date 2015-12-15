@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+use Symfony\Component\Console\Application;
+require implode(DIRECTORY_SEPARATOR, array(dirname(__DIR__), 'vendor', 'autoload.php'));
+$commands = glob(__DIR__ . DIRECTORY_SEPARATOR . 'command' . DIRECTORY_SEPARATOR . '*.php');
+
+$application = new Application();
+foreach ($commands as $c) {
+    $command = '\\command\\' . basename($c, '.php');
+    $application->add(new $command());
+}
+$application->run();

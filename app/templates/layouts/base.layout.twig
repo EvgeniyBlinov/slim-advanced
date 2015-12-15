@@ -11,7 +11,7 @@
     <meta content="index, follow" name="robots">
 
     {% if page is not empty %}
-        <meta content="{{ page.description is not empty ? 'page.description : page_description }}" name="description">
+        <meta content="{{ page.description is not empty ? page.description : page_description }}" name="description">
         <meta content="{{ page.keywords is not empty ? page.keywords : page_keywords }}" name="keywords">
     {% else %}
         <meta content="{{ page_description }}" name="description">

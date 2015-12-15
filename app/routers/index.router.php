@@ -1,12 +1,9 @@
 <?php
+use models\User;
 $app->get('/(:locale)(/)'/*, $accessControl('some')*/, function ($locale = APP_DEFAULT_LOCALE) use ($app) {
     $title = 'title';
 
-    echo "<pre>";var_dump(
-        'вывести темлейт',
-        'подключить illuminate database',
-    $app->config['templates.path']
-    );die;
+    //$users = User::all()->toJson();
     $app->render('index.twig', compact('title', 'locale'));
 })
     ->name('url_home')

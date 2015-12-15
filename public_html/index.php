@@ -4,7 +4,7 @@ use lib\Config;
 defined('APP_DEFAULT_LOCALE') or define('APP_DEFAULT_LOCALE', 'ru');
 defined('APP_WEB_ROOT_PATH') or define('APP_WEB_ROOT_PATH', __DIR__);
 defined('ROOT_PATH') or define('ROOT_PATH', dirname(__DIR__));
-defined('APP_ROOT_PATH') or define('APP_ROOT_PATH', ROOT_PATH . DIRECTORY_SEPARATOR . 'src');
+defined('APP_ROOT_PATH') or define('APP_ROOT_PATH', ROOT_PATH . DIRECTORY_SEPARATOR . 'app');
 
 require(ROOT_PATH . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php');
 require(APP_ROOT_PATH . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'config.php');

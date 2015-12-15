@@ -1,0 +1,23 @@
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `role` int(4) unsigned NOT NULL,
+  `date_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `nickname` varchar(100) NOT NULL DEFAULT '',
+  `first_name` varchar(100) NOT NULL DEFAULT '',
+  `second_name` varchar(100) NOT NULL DEFAULT '',
+  `sex` enum('unknown','male','female') NOT NULL DEFAULT 'unknown',
+  `address` varchar(100) NOT NULL DEFAULT '',
+  `telephone_1` int(13) NOT NULL DEFAULT '0',
+  `skype` varchar(100) NOT NULL DEFAULT '',
+  `avatar` varchar(100) NOT NULL DEFAULT '',
+  `identity` varchar(255) NOT NULL,
+  `network` varchar(255) NOT NULL,
+  `full_name` varchar(255) NOT NULL DEFAULT '',
+  `longitude` float NOT NULL DEFAULT '0',
+  `latitude` float NOT NULL DEFAULT '0',
+  `activkey` varchar(50) NOT NULL,
+  `status` enum('not_verified','verified','blocked','removed') NOT NULL DEFAULT 'not_verified',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
