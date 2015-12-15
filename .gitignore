@@ -1,4 +1,6 @@
-/vendor/
+/vendor/*
+!/vendor/.htaccess
+
 tags
 *.tags
 
