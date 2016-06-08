@@ -11,3 +11,5 @@ public_html/node_modules/*
 
 public_html/src/js/revision.js
 public_html/sitemap.xml
+
+composer.lock
