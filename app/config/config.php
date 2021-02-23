@@ -42,12 +42,23 @@ Config::$confArray = array(
                 )
             ),
             'eloquent' => array(
+                //'default' => array(
+                    //'driver'    => 'mysql',
+                    //'host'      => '127.0.0.1',
+                    //'database'  => APPLICATION_MYSQL_DB_NAME,
+                    //'username'  => APPLICATION_MYSQL_USER,
+                    //'password'  => APPLICATION_MYSQL_PASS,
+                    //'charset'   => 'utf8',
+                    //'collation' => 'utf8_general_ci',
+                    //'prefix'    => ''
+                //),
                 'default' => array(
-                    'driver'    => 'mysql',
+                    'driver'    => 'postgresql',
                     'host'      => '127.0.0.1',
-                    'database'  => APPLICATION_MYSQL_DB_NAME,
-                    'username'  => APPLICATION_MYSQL_USER,
-                    'password'  => APPLICATION_MYSQL_PASS,
+                    'port'      => '5432',
+                    'database'  => APPLICATION_DATABASE_DB_NAME,
+                    'username'  => APPLICATION_DATABASE_USER,
+                    'password'  => APPLICATION_DATABASE_PASS,
                     'charset'   => 'utf8',
                     'collation' => 'utf8_general_ci',
                     'prefix'    => ''

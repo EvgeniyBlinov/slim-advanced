@@ -4,7 +4,6 @@
 tags
 *.tags
 
-app/config/db.php
 app/cache
 
 public_html/node_modules/*
